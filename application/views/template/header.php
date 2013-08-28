@@ -39,84 +39,84 @@
     <!-- <link rel="stylesheet" href="css/style.css"> -->
 
     <script src="js/libs/modernizr-2.6.2.min.js"></script>
+    <style>
+       /* .btn,.drawer { margin-bottom:10px; }
+        .drawer { text-align: center; }
+        h1.lead { border-bottom: 1px dotted #ccc; margin-bottom: 30px; }
+        h4.lead { margin-bottom:10px; }
+        #icon_map ul li { font-size: 16px; }
+        .smallify { font-size: 13px; }
+        .modal h2, .modal .btn { margin: 5% 0 20px; }
+       */
+        .navbar a.toggle:hover { background: #f7f7f7; }
+        
+        a.tooltip {outline:none; }
+        a.tooltip strong {line-height:30px;}
+        a.tooltip:hover {text-decoration:none;} 
+        a.tooltip span {
+            z-index:10;display:none; padding:14px 20px;
+            margin-top:0px; margin-left:5px;
+            width:240px; line-height:16px;
+        }
+        a.tooltip:hover span{
+            display:inline; position:fixed; color:#111;
+            border:1px solid #DCA; background:#fffAF0;}
+            
+        /*CSS3 extras*/
+        a.tooltip span
+        {
+            border-radius:4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+                
+            -moz-box-shadow: 5px 5px 8px #CCC;
+            -webkit-box-shadow: 5px 5px 8px #CCC;
+            box-shadow: 5px 5px 8px #CCC;
+        }
+    </style>
 </head>
 
-<style>
-   /* .btn,.drawer { margin-bottom:10px; }
-    .drawer { text-align: center; }
-    h1.lead { border-bottom: 1px dotted #ccc; margin-bottom: 30px; }
-    h4.lead { margin-bottom:10px; }
-    #icon_map ul li { font-size: 16px; }
-    .smallify { font-size: 13px; }
-    .modal h2, .modal .btn { margin: 5% 0 20px; }
-   */
-    .navbar a.toggle:hover { background: #f7f7f7; }
-    
-    a.tooltip {outline:none; }
-    a.tooltip strong {line-height:30px;}
-    a.tooltip:hover {text-decoration:none;} 
-    a.tooltip span {
-        z-index:10;display:none; padding:14px 20px;
-        margin-top:-30px; margin-left:28px;
-        width:240px; line-height:16px;
-    }
-    a.tooltip:hover span{
-        display:inline; position:absolute; color:#111;
-        border:1px solid #DCA; background:#fffAF0;}
-        
-    /*CSS3 extras*/
-    a.tooltip span
-    {
-        border-radius:4px;
-        -moz-border-radius: 4px;
-        -webkit-border-radius: 4px;
-            
-        -moz-box-shadow: 5px 5px 8px #CCC;
-        -webkit-box-shadow: 5px 5px 8px #CCC;
-        box-shadow: 5px 5px 8px #CCC;
-    }
-</style>
-
-<body>
-<body>
+<body class="container">
 	<div class="row" style="margin-top: 5px; margin-bottom: 0px;">	
-	    <div class="twelve columns" style="background: #E21212">
+	    <div class="twelve columns" >
 	        <div class="row">
-	            <div class="two columns" style="background: #05390A">
+	            <div class="two columns" >
                     <a href="#">
                         <img src="<?=base_url('img/director.jpg')?>"/>
                     </a>
                 </div>
-                <div class="row">
-                    <div class=" two columns">
-                        <a href="#"><img src="<?=base_url('img/icon/fb.png')?>"/></a>
+                <div class="ten columns" style="margin-left: 5px">
+                    <div class="row" >
+                        <div class=" push_six one columns">
+                            <a href="#"><img src="<?=base_url('img/icon/fb.png')?>"/></a>
+                        </div>
+                        <div class=" one columns">
+                            <a href="#"><img src="<?=base_url('img/icon/tw.png')?>"/></a>
+                        </div>
+                        <div class=" one columns">
+                            <a href="#"><img src="<?=base_url('img/icon/yt.png')?>"/></a>
+                        </div>
+                        <div class=" one columns">
+                            <a href="#" class="tooltip">
+                                <img src="<?=base_url('img/icon/mail.png')?>" />
+                                <span>
+                                    <img src="<?=base_url('img/icon/gmail.png')?>"/>
+                                    <strong>google@gmail.com</strong><br />
+                                    <img src="<?=base_url('img/icon/ymail.png')?>"/>
+                                    <strong>yahoo@yahoo.com</strong><br />
+                                </span>
+                            </a>
+                        </div>
                     </div>
-                    <div class=" two columns">
-                        <a href="#"><img src="<?=base_url('img/icon/tw.png')?>"/></a>
-                    </div>
-                    <div class=" two columns">
-                        <a href="#"><img src="<?=base_url('img/icon/yt.png')?>"/></a>
-                    </div>
-                    <div class=" two columns">
-                        <a href="#" class="tooltip">
-                            <img src="<?=base_url('img/icon/mail.png')?>" />
-                            <span>
-                                <img src="<?=base_url('img/icon/gmail.png')?>"/>
-                                <strong>google@gmail.com</strong><br />
-                                <img src="<?=base_url('img/icon/ymail.png')?>"/>
-                                <strong>yahoo@yahoo.com</strong><br />
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="two columns" style="background: #F4A60E">
-                        <br/><br/><br/>
-                        <h3>Institue of </h3>
-                        <h4>สำนักพัฒนา</h4>
-                    </div>
-                    <div class="push_four four columns" style="background: #F4A60E">
-                            <i class="icon-phone"></i><b>02-5555555, 085-5555555</b>
+                    <div class="row" >
+                        <div class="seven columns" >
+                            <br/>
+                            <h3>Institue of Director Preparatory</h3>
+                            <h4>สำนักพัฒนาผู้อำนวยการ</h4>
+                        </div>
+                        <div class="three columns" >
+                                <i class="icon-phone"></i><b>02-5555555, 085-5555555</b>
+                        </div>
                     </div>
                 </div>
 	        </div>
