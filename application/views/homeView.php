@@ -7,7 +7,8 @@
     
     <body>
         Site Url: <?php echo site_url('home/x')?><br/>
-        Base Url: <?php echo base_url('home/x')?>
+        Base Url: <?php echo base_url('home/x')?></br>
+        MEOW!!!
     </body>
     
 </html>
