@@ -7,24 +7,27 @@
     <script>
     var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
     if(!oldieCheck) {
-    document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
+        document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
     } else {
-    document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
+        document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
     }
     </script>
     <script>
     if(!window.jQuery) {
     if(!oldieCheck) {
-      document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+      document.write('<script src="<?=base_url("js/libs/jquery-2.0.2.min.js")?>"><\/script>');
     } else {
-      document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>');
+      document.write('<script src="<?=base_url("js/libs/jquery-1.10.1.min.js")?>"><\/script>');
     }
     }
     </script>
-
-    <script src="js/libs/gumby.min.js"></script>
+    <!--<script src="js/libs/gumby.min.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script>-->
+    
+    <script src="<?=base_url("js/libs/gumby.min.js")?>"></script>
+    <script src="<?=base_url("js/plugins.js")?>"></script>
+    <script src="<?=base_url("js/main.js")?>"></script>
 
     <!-- Change UA-XXXXX-X to be your site's ID -->
     <!--<script>

@@ -35,10 +35,13 @@
 
     <!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
              However, there is a blank style.css in the css directory should you prefer -->
-    <link rel="stylesheet" href="css/gumby.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    
+    <link rel="stylesheet" href="<?=base_url("css/gumby.css")?>">
+     <!--<link rel="stylesheet" href="css/style.css"> 
+         <link rel="stylesheet" href="css/gumby.css">-->
 
-    <script src="js/libs/modernizr-2.6.2.min.js"></script>
+    <!--<script src="js/libs/modernizr-2.6.2.min.js"></script>-->
+    <script src="<?=base_url("js/libs/modernizr-2.6.2.min.js")?>"></script>
 </head>
 
 <style>
@@ -55,9 +58,9 @@
     a.tooltip {outline:none; }
     a.tooltip strong {line-height:30px;}
     a.tooltip:hover {text-decoration:none;} 
-    a.tooltip span {
+    a.tooltip span {   /* Must separate into any browser */
         z-index:10;display:none; padding:14px 20px;
-        margin-top:-30px; margin-left:28px;
+        margin-top: -30px; margin-left:28px;
         width:240px; line-height:16px;
     }
     a.tooltip:hover span{
@@ -77,52 +80,55 @@
     }
 </style>
 
-<body>
-<body>
+<body >
+    
 	<div class="row" style="margin-top: 5px; margin-bottom: 0px;">	
-	    <div class="twelve columns" style="background: #E21212">
+	    <div class="twelve columns" >
 	        <div class="row">
-	            <div class="two columns" style="background: #05390A">
+	            <div class="two columns" >
                     <a href="#">
                         <img src="<?=base_url('img/director.jpg')?>"/>
                     </a>
                 </div>
-                <div class="row">
-                    <div class=" two columns">
-                        <a href="#"><img src="<?=base_url('img/icon/fb.png')?>"/></a>
+                <div class="ten columns">
+                    <div class="row">
+                        <div class=" push_seven one columns">
+                            <a href="#"><img src="<?=base_url('img/icon/fb.png')?>"/></a>
+                        </div>
+                        <div class=" one columns">
+                            <a href="#"><img src="<?=base_url('img/icon/tw.png')?>"/></a>
+                        </div>
+                        <div class=" one columns">
+                            <a href="#"><img src="<?=base_url('img/icon/yt.png')?>"/></a>
+                        </div>
+                        <div class=" one columns">
+                            <a href="#" class="tooltip">
+                                <img src="<?=base_url('img/icon/mail.png')?>" />
+                                <span>
+                                    <img src="<?=base_url('img/icon/gmail.png')?>"/>
+                                    <strong>google@gmail.com</strong><br />
+                                    <img src="<?=base_url('img/icon/ymail.png')?>"/>
+                                    <strong>yahoo@yahoo.com</strong><br />
+                                </span>
+                            </a>
+                        </div>
                     </div>
-                    <div class=" two columns">
-                        <a href="#"><img src="<?=base_url('img/icon/tw.png')?>"/></a>
-                    </div>
-                    <div class=" two columns">
-                        <a href="#"><img src="<?=base_url('img/icon/yt.png')?>"/></a>
-                    </div>
-                    <div class=" two columns">
-                        <a href="#" class="tooltip">
-                            <img src="<?=base_url('img/icon/mail.png')?>" />
-                            <span>
-                                <img src="<?=base_url('img/icon/gmail.png')?>"/>
-                                <strong>google@gmail.com</strong><br />
-                                <img src="<?=base_url('img/icon/ymail.png')?>"/>
-                                <strong>yahoo@yahoo.com</strong><br />
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="two columns" style="background: #F4A60E">
-                        <br/><br/><br/>
-                        <h3>Institue of </h3>
-                        <h4>สำนักพัฒนา</h4>
-                    </div>
-                    <div class="push_four four columns" style="background: #F4A60E">
-                            <i class="icon-phone"></i><b>02-5555555, 085-5555555</b>
+                    <div class="row">
+                        <div class="seven columns" >
+                            <br/>
+                            <h3>Dr.Apichai</h3>
+                            <h4>สำนักเตรียมผู้อำนวยการ</h4>
+                        </div>
+                        <div class=" four columns" >
+                                <i class="icon-phone"></i><b>02-5555555, 085-5555555</b>
+                        </div>
                     </div>
                 </div>
 	        </div>
 	    </div>
 	</div>
-	<div class="navbar row" id="nav2" style="background: #3b5998">
+
+	<div class="navbar row" id="nav2" style="background: #3b5998; margin-bottom: 5px;">
 		<a class="toggle" gumby-trigger="#nav2 > ul" href="#"><i class="icon-menu"></i></a>
 		<ul class="twelve columns">
 			<li><a href="#">หน้าแรก</a></li>
