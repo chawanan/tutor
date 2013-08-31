@@ -109,8 +109,9 @@ class CI_Controller {
 	public function loadView($content, $data = null) {
 	    $header['title'] = "Dr.Apichai";
 		$this->load->view ( 'template/header', $header);
+        $this->load->view ( 'template/footer' );
 		$this->load->view ( $content, $data );
-		$this->load->view ( 'template/footer' );
+		
 	}
 }
 // END Controller class

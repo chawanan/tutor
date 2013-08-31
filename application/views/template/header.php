@@ -37,11 +37,20 @@
              However, there is a blank style.css in the css directory should you prefer -->
     
     <link rel="stylesheet" href="<?=base_url("css/gumby.css")?>">
+    <link rel="stylesheet" href="<?=base_url("css/style.css")?>">
      <!--<link rel="stylesheet" href="css/style.css"> 
          <link rel="stylesheet" href="css/gumby.css">-->
 
     <!--<script src="js/libs/modernizr-2.6.2.min.js"></script>-->
     <script src="<?=base_url("js/libs/modernizr-2.6.2.min.js")?>"></script>
+    <!-- <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script> -->
 </head>
 
 <style>
@@ -59,9 +68,9 @@
     a.tooltip strong {line-height:30px;}
     a.tooltip:hover {text-decoration:none;} 
     a.tooltip span {   /* Must separate into any browser */
-        z-index:10;display:none; padding:14px 20px;
+        z-index:10;display:none; padding:10px 10px;
         margin-top: -30px; margin-left:28px;
-        width:240px; line-height:16px;
+        width:270px; line-height:16px;
     }
     a.tooltip:hover span{
         display:inline; position:absolute; color:#111;
@@ -78,9 +87,60 @@
         -webkit-box-shadow: 5px 5px 8px #CCC;
         box-shadow: 5px 5px 8px #CCC;
     }
+    
+    .FB_pic_container
+        {
+         display:inline-block;
+         position: relative;
+         width:220px;
+         height: 150px;
+         text-align:center;
+         overflow: hidden;
+         border: none;
+         border-radius: 2px;
+         outline: none;
+         margin: 2px;
+         padding: 2px;
+        }
+         
+    .FB_pic_container:hover
+        {
+         border-color: #56B4EF;
+         box-shadow: inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+         -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+        }
+         
+    .FB_pic_label
+        {
+         text-decoration:none;
+         color: #fff;
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         left: 0;
+         background-color:#000;
+         opacity:0.9;
+         filter:alpha(opacity=90); /* For IE8 and earlier */
+        }
+         
+    .FB_pic_container:hover .FB_pic_label
+        {
+         opacity:0.5;
+         filter:alpha(opacity=50); /* For IE8 and earlier */
+        }
+         
+        .FB_pic_container img
+        {
+         position: absolute;
+         margin: auto;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 22px;
+        }
 </style>
 
-<body >
+<body style="background: #F1F2F3">
     
 	<div class="row" style="margin-top: 5px; margin-bottom: 0px;">	
 	    <div class="twelve columns" >
@@ -106,9 +166,9 @@
                                 <img src="<?=base_url('img/icon/mail.png')?>" />
                                 <span>
                                     <img src="<?=base_url('img/icon/gmail.png')?>"/>
-                                    <strong>google@gmail.com</strong><br />
-                                    <img src="<?=base_url('img/icon/ymail.png')?>"/>
-                                    <strong>yahoo@yahoo.com</strong><br />
+                                    <strong>Dr.Apichai1@gmail.com</strong><br />
+                                    <!-- <img src="<?=base_url('img/icon/ymail.png')?>"/>
+                                    <strong>yahoo@yahoo.com</strong><br /> -->
                                 </span>
                             </a>
                         </div>
@@ -117,10 +177,14 @@
                         <div class="seven columns" >
                             <br/>
                             <h3>Dr.Apichai</h3>
-                            <h4>สำนักเตรียมผู้อำนวยการ</h4>
+                            <h4>สำนักพัฒนาภาวะผู้นำทางการศึกษา</h4>
                         </div>
                         <div class=" four columns" >
-                                <i class="icon-phone"></i><b>02-5555555, 085-5555555</b>
+                            <div class="row">
+                                <i class="icon-phone"></i><b>081-5553656</b>
+                            </div>
+                            <!-- <div class="row"><div class="fb-like" data-href="http://developers.facebook.com/docs/reference/plugins/like" data-width="50" data-show-faces="false" data-send="false"></div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -131,13 +195,13 @@
 	<div class="navbar row" id="nav2" style="background: #3b5998; margin-bottom: 5px;">
 		<a class="toggle" gumby-trigger="#nav2 > ul" href="#"><i class="icon-menu"></i></a>
 		<ul class="twelve columns">
-			<li><a href="#">หน้าแรก</a></li>
-			<li><a href="#">ประวัติวิทยากร</a></li>
-			<li><a href="#">หลักสูตรและการสมัคร</a></li>
-			<li><a href="#">ข่าวการศึกษา</a></li>
-			<li><a href="#">บทความ</a></li>
-			<li><a href="#">ภาพกิจกรรม</a></li>
-			<li><a href="#">ติดต่อเรา</a></li>			
+			<li><a href="<?=site_url('Home')?>">หน้าแรก</a></li>
+			<li><a href="<?=site_url('Profile')?>">ประวัติวิทยากร</a></li>
+			<li><a href="<?=site_url('Home')?>">หลักสูตรและการสมัคร</a></li>
+			<li><a href="<?=site_url('Home')?>">ข่าวการศึกษา</a></li>
+			<li><a href="<?=site_url('Home')?>">บทความ</a></li>
+			<li><a href="<?=site_url('Home')?>">ภาพกิจกรรม</a></li>
+			<li><a href="<?=site_url('Home')?>">ติดต่อเรา</a></li>			
 		</ul>
 	</div>
   </body>

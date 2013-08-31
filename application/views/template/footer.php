@@ -21,9 +21,10 @@
     }
     }
     </script>
-    <!--<script src="js/libs/gumby.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>-->
+    
+    <script src="<?=base_url("js/galleria/galleria-1.2.8.min.js")?>"></script>
+    <script src="<?=base_url("js/galleria/plugins/facebook/galleria.facebook.js")?>"></script>
+    <script src="<?=base_url("js/css-pop.js")?>"></script>
     
     <script src="<?=base_url("js/libs/gumby.min.js")?>"></script>
     <script src="<?=base_url("js/plugins.js")?>"></script>

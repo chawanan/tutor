@@ -17,10 +17,13 @@ class Profile extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
-    public function index()
-    {
-        $this->loadView('profileView');
-    }
+         
+     public function index()
+     {
+         $this->load->model('facebook_helper');
+         $data['jdata'] = $this->facebook_helper->getPagePhoto();
+         $this->loadView('profileView', $data); 
+     }
 }
 
 /* End of file welcome.php */

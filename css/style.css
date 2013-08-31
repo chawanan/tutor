@@ -2,3 +2,59 @@
 We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
 However, this blank file is available if you prefer
 */
+/*WebDesignAndSuch.com*/
+
+/*WebDesignAndSuch.com*/
+@charset "UTF-8";
+ #container {
+	width: 720px;  
+	background: #FFFFFF;
+	/*margin: 0 auto; */
+	margin-left:9999px;
+	font-size:14px;
+	text-align: left; 
+}
+#mainContent {
+	padding: 0 60px;
+	min-height:600px;
+	line-height:25px
+}
+
+img {border:0px}
+
+
+/*STYLES FOR CSS POPUP*/
+#blanket {
+   background-color:#111;
+   opacity: 0.65;
+   *background: solid;
+   position:absolute;
+   z-index: 9001;
+   top:0px;
+   left:0px;
+   width:100%;
+}
+
+#galleria {
+	position:absolute;
+	width:1px;
+	height:550px;
+	border: none;
+	z-index: 9002;
+}
+
+#galleria a {position:relative; top:20px; left:20px}
+
+.galleria-fscr{
+    /*width:50px;
+    height:20px;*/
+    position:absolute;
+    background: #FEECCA;
+    z-index:4;
+    cursor: pointer;
+    opacity: .3;
+}
+.galleria-fscr:hover{
+    opacity:1;
+}
+
